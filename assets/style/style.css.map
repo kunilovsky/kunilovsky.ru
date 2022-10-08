@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "sass/style.sass",
+        "sass/_color.sass",
+        "sass/_header.sass",
+        "sass/_component.sass",
+        "sass/_footer.sass",
+        "sass/_mobile.sass"
+    ],
+    "names": [],
+    "file": "style.css"
+}
