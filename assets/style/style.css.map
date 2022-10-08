@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,2BAA2B;CAAG",
     "sources": [
         "sass/style.sass",
         "sass/_color.sass",
