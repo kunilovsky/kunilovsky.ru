@@ -1,0 +1,25 @@
+/* Message */
+%message-block
+    border: 1px solid $black
+    border-radius: 5px
+    color: $black
+.message
+    @extend %message-block
+.error
+    @extend %message-block
+    border-color: $red
+.warning
+    @extend %message-block
+    border-color: $yellow
+
+/* Global */
+%btn
+    font-size: 16px
+    font-weight: 400
+    padding: 15px 30px
+    line-height: 2
+.btn-info
+    @extend %btn
+    background: $blue
+    color: $white
+
