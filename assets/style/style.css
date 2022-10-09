@@ -13,6 +13,7 @@ body {
   /* Text Colors */
   --text-white: #fff;
   --text-dark: #000;
+  --text-grey: #8d8d8d;
   /* Bacground Colors */
   --bg-white: #fff;
   --bg-dark: #01142F;
@@ -55,5 +56,11 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  list-style: none;
+  color: var(--text-grey);
+}
+
+.active {
+  color: var(--text-dark);
 }
 /*# sourceMappingURL=style.css.map */

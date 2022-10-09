@@ -22,15 +22,15 @@
                 <button>
                     <span></span>
                 </button>
-                <ul class="navbar-menu">
-                    <li class="navbar-link">
-                        Обо мне
+                <ul id="menu" class="navbar-menu">
+                    <li class="navbar-item">
+                        <a class="navbar-link active" href="#about">Обо мне</a>
                     </li>
-                    <li class="navbar-link">
-                        Проекты
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#project">Проекты</a>
                     </li>
-                    <li class="navbar-link">
-                        Контакты
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#contacts">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -40,7 +40,7 @@
     <!-- Main -->
     <main>
         <!-- Toggle Theme mode -->
-        <button id="toggle">Сменить тему</button>
+        <button style="display: none;" id="toggle">Сменить тему</button>
         <!-- /Toggle Theme mode -->
     </main>
     <!-- /Main -->
@@ -52,6 +52,7 @@
     <!-- Modal -->
     <!-- /Modal -->
     <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/mode.js"></script>
     <!-- /JavaScript -->
 </body>
