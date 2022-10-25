@@ -37,6 +37,7 @@ body {
   --text-white: #000;
   --text-dark: #fff;
   --bg-white: #01142F;
+  --bg-grey-light: #171a2d;
 }
 
 header {
@@ -110,12 +111,29 @@ nav {
   font-size: 24px;
 }
 
+.avatar {
+  width: 50px;
+  height: auto;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+.avatar-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .avatar-job {
   font-size: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: var(--text-grey);
+  width: 100%;
+  font-weight: 300;
 }
 
 .avatar-job::after {
@@ -167,6 +185,10 @@ nav {
 }
 
 /* Global */
+main {
+  margin-top: 80px;
+}
+
 .btn, .btn-info {
   font-size: 16px;
   font-weight: 400;
@@ -179,34 +201,25 @@ nav {
   color: #fff;
 }
 
-/* Avatar */
-.avatar {
-  width: 50px;
-  height: auto;
-  border-radius: 100%;
-  margin-right: 15px;
+@media (min-width: 992px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
-.avatar-job {
-  font-size: 12px;
-  font-weight: 300;
-  color: var(--text-grey);
-  width: 100%;
-}
-
-.avatar-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-/* Container */
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+@media (max-width: 991.98px) {
+  .navbar-menu {
+    display: none;
+  }
+  .navbar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 /* Modal */
@@ -239,26 +252,5 @@ nav {
   padding: 20px 45px;
   border-radius: 15px 15px 0 0;
   font-size: 14px;
-}
-
-@media (min-width: 992px) {
-  .mobile-menu {
-    display: none;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .navbar-menu {
-    display: none;
-  }
-  .navbar {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .navbar-item {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
 }
 /*# sourceMappingURL=style.css.map */
