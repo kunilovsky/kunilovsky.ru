@@ -18,14 +18,16 @@ p {
   font-weight: 400;
 }
 
+/* Light Colors */
 body {
   /* Text Colors */
   --text-white: #fff;
   --text-dark: #000;
   --text-grey: #8d8d8d;
-  /* Bacground Colors */
+  /* Background Colors */
   --bg-white: #fff;
   --bg-dark: #01142F;
+  --bg-grey-light: #F0F0F0;
   /* Body Style */
   background: var(--bg-white);
 }
@@ -38,6 +40,8 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,8 +49,7 @@ header {
   max-height: 80px;
   color: var(--text-dark);
   background: var(--bg-white);
-  padding: 15px 0;
-  position: relative;
+  padding: 10px 0;
 }
 
 nav {
@@ -69,10 +72,18 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   display: block;
+  -webkit-transition: fill .15s linear;
+  transition: fill .15s linear;
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
 }
 
 .menu-icon-close {
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"%3E%3Cpath fill="currentColor" d="M764.288 214.592L512 466.88L259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512L214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"%2F%3E%3C%2Fsvg%3E');
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: rotate(0.5turn);
+          transform: rotate(0.5turn);
 }
 
 .navbar {
@@ -85,8 +96,35 @@ nav {
           align-items: center;
 }
 
-.navbar-logo {
-  max-width: 300px;
+.navbar-brand {
+  max-width: 350px;
+}
+
+.navbar-brand a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 24px;
+}
+
+.avatar-job {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--text-grey);
+}
+
+.avatar-job::after {
+  content: '';
+  background-image: url("/assets/img/icons/ru.svg");
+  display: block;
+  width: 22px;
+  height: 14px;
+  margin-left: 5px;
 }
 
 .navbar-menu {
@@ -105,6 +143,8 @@ nav {
   left: 0;
   right: 0;
   padding: 0 15px 80px 15px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .navbar-link {
@@ -112,6 +152,8 @@ nav {
   text-decoration: none;
   -webkit-transition: .3s;
   transition: .3s;
+  font-size: 16px;
+  padding: 7px 15px;
 }
 
 .navbar-link:hover {
@@ -120,25 +162,12 @@ nav {
 
 .active {
   color: var(--text-dark);
-}
-
-/* Message */
-.message, .error, .warning {
-  border: 1px solid #000;
-  border-radius: 5px;
-  color: #000;
-}
-
-.error {
-  border-color: #E20338;
-}
-
-.warning {
-  border-color: #FFD600;
+  background-color: var(--bg-grey-light);
+  border-radius: 4px;
 }
 
 /* Global */
-.btn-info {
+.btn, .btn-info {
   font-size: 16px;
   font-weight: 400;
   padding: 15px 30px;
@@ -148,6 +177,68 @@ nav {
 .btn-info {
   background: #0260E8;
   color: #fff;
+}
+
+/* Avatar */
+.avatar {
+  width: 50px;
+  height: auto;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+.avatar-job {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--text-grey);
+  width: 100%;
+}
+
+.avatar-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-white);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.open {
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: auto;
+  right: auto;
+  left: 46%;
+  bottom: 0;
+  background: var(--text-dark);
+  color: var(--text-white);
+  border: none;
+  padding: 20px 45px;
+  border-radius: 15px 15px 0 0;
+  font-size: 14px;
 }
 
 @media (min-width: 992px) {
@@ -164,6 +255,10 @@ nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .navbar-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */

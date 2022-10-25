@@ -1,11 +1,12 @@
 header
+    position: fixed
+    top: 0
     width: 100%
     display: flex
     max-height: 80px
     color: var(--text-dark)
     background: var(--bg-white)
-    padding: 15px 0
-    position: relative
+    padding: 10px 0
 nav
     width: 100%
 .mobile-menu
@@ -22,14 +23,35 @@ nav
     background-position: center
     background-repeat: no-repeat
     display: block
+    transition: fill .15s linear
+    transform: rotate(1turn)
 .menu-icon-close
     background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"%3E%3Cpath fill="currentColor" d="M764.288 214.592L512 466.88L259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512L214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"%2F%3E%3C%2Fsvg%3E')
+    transition: .3s
+    transform: rotate(0.5turn)
 .navbar
     display: flex
     padding: 5px 10px
     align-items: center
-.navbar-logo
-    max-width: 300px
+.navbar-brand
+    max-width: 350px
+.navbar-brand a
+    display: flex
+    text-decoration: none
+    font-weight: 700
+    color: var(--text-dark)
+    font-size: 24px
+.avatar-job
+    font-size: 12px
+    display: flex
+    color: var(--text-grey)
+    &::after
+        content: ''
+        background-image: url('/assets/img/icons/ru.svg')
+        display: block
+        width: 22px
+        height: 14px
+        margin-left: 5px
 .navbar-menu
     display: flex
     list-style: none
@@ -42,12 +64,16 @@ nav
     left: 0
     right: 0
     padding: 0 15px 80px 15px
+    transition: .3s
 .navbar-link
     color: var(--text-grey)
     text-decoration: none
     transition: .3s
+    font-size: 16px
+    padding: 7px 15px
     &:hover
         color: var(--text-dark)
 .active
     color: var(--text-dark)
-
+    background-color: var(--bg-grey-light)
+    border-radius: 4px

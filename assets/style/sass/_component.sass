@@ -1,25 +1,57 @@
-/* Message */
-%message-block
-    border: 1px solid $black
-    border-radius: 5px
-    color: $black
-.message
-    @extend %message-block
-.error
-    @extend %message-block
-    border-color: $red
-.warning
-    @extend %message-block
-    border-color: $yellow
-
 /* Global */
 %btn
     font-size: 16px
     font-weight: 400
     padding: 15px 30px
     line-height: 2
+.btn
+    @extend %btn
 .btn-info
     @extend %btn
     background: $blue
     color: $white
 
+/* Avatar */
+.avatar
+    width: 50px
+    height: auto
+    border-radius: 100%
+    margin-right: 15px
+.avatar-job
+    font-size: 12px
+    font-weight: 300
+    color: var(--text-grey)
+    width: 100%
+.avatar-name
+    display: flex
+    flex-wrap: wrap
+/* Container */
+.container
+    max-width: 1200px
+    margin-left: auto
+    margin-right: auto
+/* Modal */
+.modal
+    display: none
+    position: absolute
+    z-index: 999
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: var(--bg-white)
+    transition: .3s
+.open
+    display: block
+.close
+    position: absolute
+    top: auto
+    right: auto
+    left: 46%
+    bottom: 0
+    background: var(--text-dark)
+    color: var(--text-white)
+    border: none
+    padding: 20px 45px
+    border-radius: 15px 15px 0 0
+    font-size: 14px

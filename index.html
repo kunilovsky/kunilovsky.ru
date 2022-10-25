@@ -16,8 +16,14 @@
     <header>
         <nav>
             <div class="navbar container">
-                <div class="navbar-logo">
-                    <a href="/">Kunilovsky VA</a>
+                <div class="navbar-brand">
+                    <a href="/">
+                        <img class="avatar" src="assets/img/kunilovsky.webp" alt="Kunilovsky Vladimir photo">
+                        <div class="avatar-name">
+                            Kunilovsky VA
+                            <span class="avatar-job">Web Developer</span>
+                        </div>
+                    </a>
                 </div>
                 <button id="menu" class="mobile-menu" type="button">
                     <span class="menu-icon"></span>
@@ -33,7 +39,7 @@
                         <a class="navbar-link" href="#project">Блог</a>
                     </li>
                     <li class="navbar-item">
-                        <a class="navbar-link" href="#contacts">Контакты</a>
+                        <a id="contacts-all" type="button" class="navbar-link" href="#project">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -45,9 +51,6 @@
         <!-- Toggle Theme mode -->
         <button style="display: none;" id="toggle">Сменить тему</button>
         <!-- /Toggle Theme mode -->
-        <div class="message error">
-            test
-        </div>
     </main>
     <!-- /Main -->
     <!-- Footer -->
@@ -56,11 +59,20 @@
     </footer>
     <!-- /Footer -->
     <!-- Modal -->
+    <div id="modal-contact" class="modal">
+        <button id="close" class="close">
+            Закрыть
+        </button>
+        <div class="">
+            test
+        </div>
+    </div>
     <!-- /Modal -->
     <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
     <script src="assets/js/nav.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/mode.js"></script>
+    <script src="assets/js/modal.js"></script>
     <!-- /JavaScript -->
 </body>
 
